@@ -1,4 +1,4 @@
-
+// File: src/components/ui/TeamMember.tsx
 import { HTMLAttributes } from "react";
 import { cn } from "@/lib/utils";
 
@@ -10,7 +10,7 @@ interface TeamMemberProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 const TeamMember = ({
-  image = "/public/placeholder.svg",
+  image = "/placeholder.svg",
   name,
   position,
   delay = 0,
