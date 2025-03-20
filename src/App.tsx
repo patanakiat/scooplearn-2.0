@@ -18,8 +18,6 @@ import NotFound from "./pages/NotFound";
 const About = lazy(() => import("./pages/About"));
 const Team = lazy(() => import("./pages/Team"));
 const Pricing = lazy(() => import("./pages/Pricing"));
-const Login = lazy(() => import("./pages/Login"));
-const Register = lazy(() => import("./pages/Register"));
 
 // Loading component
 const PageLoader = () => (
@@ -49,10 +47,9 @@ const App = () => (
                 <Route path="/about" element={<About />} />
                 <Route path="/team" element={<Team />} />
                 <Route path="/pricing" element={<Pricing />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/register" element={<Register />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
+            </Suspense>
             </Suspense>
           </main>
           <Footer />
