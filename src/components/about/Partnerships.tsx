@@ -2,10 +2,10 @@ import React from "react";
 import { Card } from "@/components/ui/card";
 
 // Import images
-import TED from "@/img/TED.png";
-import NECTEC from "@/img/NECTEC.png";
-import QUIZLET from "@/img/QUIZLET.png";
-import SKILLANE from "@/img/SKILLANE.png";
+import TED from "@/img/ted.png";
+import NECTEC from "@/img/nectec.png";
+import QUIZLET from "@/img/quizlet.png";
+import SKILLANE from "@/img/skillane.png";
 import trueDigital from "@/img/trueDigital.png";
 
 // Map partner names to their corresponding images
