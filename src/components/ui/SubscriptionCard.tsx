@@ -13,6 +13,7 @@ interface SubscriptionCardProps extends HTMLAttributes<HTMLDivElement> {
   isPopular?: boolean;
   className?: string;
   style?: React.CSSProperties;
+  isYearlyBilling?: boolean;
 }
 
 const SubscriptionCard = ({
@@ -24,9 +25,10 @@ const SubscriptionCard = ({
   isPopular = false,
   className,
   style,
+  isYearlyBilling = false,
   ...props
 }: SubscriptionCardProps) => {
-  const { toast } = useToast(); // Initialize toast from the custom hook[1]
+  const { toast } = useToast();
 
   const handleComingSoon = () => {
     toast({
@@ -77,11 +79,13 @@ const SubscriptionCard = ({
             {price}
           </span>
           {price !== "Free" && (
-            <span className="ml-1 text-gray-500 text-sm">/mo</span>
+            <span className="ml-1 text-gray-500 text-sm">
+              {isYearlyBilling ? "/year" : "/month"}
+            </span>
           )}
         </div>
 
-        {yearlyPrice && (
+        {yearlyPrice && !isYearlyBilling && (
           <div className="mt-1 text-sm text-gray-500">
             {yearlyPrice} per year
           </div>
@@ -106,7 +110,7 @@ const SubscriptionCard = ({
 
       <div className="mt-auto p-6 sm:px-8 sm:pb-8">
         <Button
-          onClick={handleComingSoon} // Attach the function to the button’s click event[1]
+          onClick={handleComingSoon}
           className={cn(
             "w-full",
             isPopular

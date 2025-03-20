@@ -102,6 +102,7 @@ const Pricing = () => {
                 "Ideal for content consumers",
                 "No expert-led courses access"
               ]}
+              isYearlyBilling={billingPeriod === "yearly"}
               className="animate-slide-up opacity-0 hover:translate-y-[-8px]"
               style={{ animationDelay: "0.2s", animationFillMode: "forwards" }}
             />
@@ -119,6 +120,7 @@ const Pricing = () => {
                 "Premium learning materials",
                 "Special features"
               ]}
+              isYearlyBilling={billingPeriod === "yearly"}
               isPopular={true}
               className="animate-slide-up opacity-0 scale-105 hover:translate-y-[-8px]"
               style={{ animationDelay: "0.3s", animationFillMode: "forwards" }}
@@ -137,6 +139,7 @@ const Pricing = () => {
                 "Weekly bonus coins",
                 "All premium features"
               ]}
+              isYearlyBilling={billingPeriod === "yearly"}
               className="animate-slide-up opacity-0 hover:translate-y-[-8px]"
               style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
             />
